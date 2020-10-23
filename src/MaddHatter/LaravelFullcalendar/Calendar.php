@@ -2,6 +2,7 @@
 
 use ArrayAccess;
 use DateTime;
+use Illuminate\Support\Str;
 use Illuminate\View\Factory;
 
 class Calendar
@@ -126,7 +127,7 @@ class Calendar
             return $this->id;
         }
 
-        $this->id = str_random(8);
+        $this->id = Str::random(8);
 
         return $this->id;
     }
